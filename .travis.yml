@@ -1,16 +1,30 @@
 language: cpp
 sudo: required
+dist: precise
+language: cpp
+
 # Compiler selection
-compiler:
-  - clang
-  - gcc
+matrix: 
+  include:
+    - compiler: gcc
+
+      addons:
+        apt:
+          sources:
+            - llvm-toolchain-precise
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-5
+
+install:
+  - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
 
 script: 
-  - sudo apt-get purge cmake -y 
-  - sudo apt-get install software-properties-common 
-  - yes '' | sudo add-apt-repository ppa:george-edison55/cmake-3.x
-  - sudo apt-get update  
-  - sudo apt-get install cmake -y
+ # - sudo apt-get purge cmake -y 
+ # - sudo apt-get install software-properties-common 
+ # - yes '' | sudo add-apt-repository ppa:george-edison55/cmake-3.x
+ # - sudo apt-get update  
+ # - sudo apt-get install cmake -y
   - mkdir build 
   - cd build 
   - cmake ../  && make
