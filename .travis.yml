@@ -11,7 +11,7 @@ matrix:
         apt:
           sources:
             - kubuntu-backports
-            - llvm-toolchain-precise
+#            - llvm-toolchain-precise
             - ubuntu-toolchain-r-test
           packages:
             - g++-5
