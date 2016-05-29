@@ -1,4 +1,4 @@
 language: cpp
 
 
-script: ls &&  cmake ../ && make
+script: mkdir build && cd build  &&  cmake ../ && make
