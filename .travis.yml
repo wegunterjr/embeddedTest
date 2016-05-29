@@ -1,4 +1,4 @@
 language: cpp
-
-install: apt-get install cmake
+sudo: required
+install: sudo apt-get install cmake
 script: mkdir build && cd build  &&  cmake ../ && make
