@@ -1,4 +1,4 @@
 language: cpp
 
-
+install: cmake get-deps
 script: mkdir build && cd build  &&  cmake ../ && make
