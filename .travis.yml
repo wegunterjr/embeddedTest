@@ -34,6 +34,5 @@ script:
   - mkdir build 
   - cd build 
   - cmake ../  && make
-
-cd src
-./hello
+  - cd src
+  - ./hello
