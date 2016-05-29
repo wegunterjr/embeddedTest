@@ -12,7 +12,9 @@ set(CMAKE_CXX_FLAGS "-std=c++11")
 add_subdirectory(src)
 add_subdirectory(Test)	
 
-add_executable(hello src\hello.cpp)
+#file(GLOB SOURCES "src/*.cpp")
+
+#add_executable(hello ${SOURCES})
 
 # src globs the cpp files into a library
 # tests mocks/tests
