@@ -6,6 +6,21 @@ project (HELLO)
 
 set(CMAKE_CXX_FLAGS "-std=c++11")
 
+# Git related macros and commands:
+find_package(Git)
+
+if(GIT_FOUND)
+  message(STATUS "Git package was found: '${GIT_EXECUTABLE}'")
+  set(PRINT_VERSION_COMMAND ${GIT_EXECUTABLE} describe)
+  set(PRINT_FILE_DATE_COMMAND_STR "${GIT_EXECUTABLE} log --pretty=format:'Author: %an <%ae>%nDate: %ad' --date=short -n 1")
+else()
+  set(PRINT_VERSION_COMMAND ${CMAKE_COMMAND} -E echo unknown version)
+  set(PRINT_FILE_DATE_COMMAND_STR "${CMAKE_COMMAND} -E echo")
+endif()
+
+# Doxygen related macros and commands:
+find_package(Doxygen)
+
 # Recurse into the "src" subdirectory. This does not actually
 # cause another cmake executable to run. The same process will walk through
 # the project's entire directory structure.
