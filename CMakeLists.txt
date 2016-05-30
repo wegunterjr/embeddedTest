@@ -25,6 +25,7 @@ find_package(Doxygen)
 # cause another cmake executable to run. The same process will walk through
 # the project's entire directory structure.
 add_subdirectory(src)
+add_subdirectory(gtest)
 add_subdirectory(Test)	
 
 #file(GLOB SOURCES "src/*.cpp")
