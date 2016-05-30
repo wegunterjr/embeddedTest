@@ -34,7 +34,7 @@ script:
  # - sudo apt-get install cmake -y
   - mkdir build 
   - cd build 
-  - --enable-gcov
+ # not sure how to enable this -> - --enable-gcov
   - cmake ../  && make
   - cd src
   - ./hello
