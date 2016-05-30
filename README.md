@@ -4,4 +4,4 @@
 # waffle.io status
 [![Stories in Ready](https://badge.waffle.io/wegunterjr/embeddedTest.svg?label=ready&title=Ready)](http://waffle.io/wegunterjr/embeddedTest)
 # gemnasium status
-[![Stories in Ready](https://badge.waffle.io/wegunterjr/embeddedTest.svg?label=ready&title=Ready)](http://waffle.io/wegunterjr/embeddedTest)
+[![Dependency Status](https://gemnasium.com/badges/github.com/wegunterjr/embeddedTest.svg)](https://gemnasium.com/github.com/wegunterjr/embeddedTest)
